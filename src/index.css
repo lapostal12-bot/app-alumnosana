@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #fcf9f2;
+    color: #292524;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Warm Bakery Gradients & Glows */
+.bakery-gradient {
+  background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 50%, #fde68a 100%);
+}
+
+.croissant-gradient {
+  background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+}
+
+.flour-pattern {
+  background-color: #fcf8f0;
+  background-image: radial-gradient(#e7e0d3 0.8px, transparent 0.8px), radial-gradient(#e7e0d3 0.8px, #fcf8f0 0.8px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Custom scrollbars with warm honey look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7eedf;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d97706;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b45309;
+}
+
+/* Print Stylesheet for Vocational Bakery Exam Cards */
+@media print {
+  @page {
+    margin: 12mm;
+    size: A4 portrait;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+  }
+
+  header, footer, nav, button, .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  #printable-bakery-sheet {
+    box-shadow: none !important;
+    border: 2px solid #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .bg-white, .bg-amber-50, .bg-stone-900, .bg-gradient-to-r {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-color: #9ca3af !important;
+    box-shadow: none !important;
+  }
+
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+
+  th, td {
+    border: 1px solid #4b5563 !important;
+    color: #000000 !important;
+    padding: 6px 10px !important;
+  }
+
+  th {
+    background-color: #f3f4f6 !important;
+    font-weight: 800 !important;
+  }
+
+  .page-break-inside-avoid {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
